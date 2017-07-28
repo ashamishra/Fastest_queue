@@ -48,7 +48,7 @@ def display_time(people_in_queue,avg_time):
 
 count = 2  #counter value; no.of people inside queue
 people_count = 6    # no. of people that have already completed billing
-with open('time_stamp.txt','r') as f:   #fetching data from text file with data in the format of in-time;out-time
+with open('time_stamp','r') as f:   #fetching data from text file with data in the format of in-time;out-time
     file_data = [time_data.strip().split(';') for time_data in f]
 # Converting data in datetime object 
 time_stamp = [[dt.datetime.strptime(times[0],"%Y-%m-%d %H:%M:%S"),dt.datetime.strptime(times[1],"%Y-%m-%d %H:%M:%S")] for times in file_data ]
